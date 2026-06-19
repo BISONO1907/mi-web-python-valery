@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valery Galaxy 💙</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:Segoe UI,sans-serif;
+background:radial-gradient(circle at top,#0ea5e9,#082f49,#020617);
+color:white;
+overflow-x:hidden;
+}
+.stars,.hearts{position:fixed;inset:0;pointer-events:none}
+.star,.heart{position:absolute;animation:float linear infinite}
+@keyframes float{from{transform:translateY(100vh)}to{transform:translateY(-120px)}}
+
+.hero{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+h1{
+font-size:5rem;
+text-shadow:0 0 25px #7dd3fc;
+}
+.subtitle{font-size:1.5rem;margin:15px 0}
+.bigheart{
+font-size:120px;
+animation:beat 1s infinite;
+}
+@keyframes beat{50%{transform:scale(1.15)}}
+
+.btn{
+padding:18px 40px;
+font-size:22px;
+border:none;
+border-radius:50px;
+background:linear-gradient(90deg,#7dd3fc,#38bdf8);
+cursor:pointer;
+font-weight:bold;
+box-shadow:0 0 30px #38bdf8;
+}
+
+.letter{
+display:none;
+max-width:1000px;
+margin:40px auto;
+padding:45px;
+background:rgba(255,255,255,.1);
+backdrop-filter:blur(18px);
+border-radius:30px;
+box-shadow:0 0 40px rgba(125,211,252,.4);
+line-height:2;
+font-size:1.2rem;
+}
+
+.quote{
+margin:20px auto;
+max-width:800px;
+font-size:1.3rem;
+color:#bae6fd;
+}
+
+.final{
+font-size:1.5rem;
+font-weight:bold;
+text-align:center;
+margin-top:30px;
+color:#7dd3fc;
+}
+
+footer{text-align:center;padding:40px}
+</style>
+</head>
+<body>
+
+<div class="stars" id="stars"></div>
+<div class="hearts" id="hearts"></div>
+
+<section class="hero">
+<div class="bigheart">💙</div>
+<h1>Valery</h1>
+<div class="subtitle">Mi estrella favorita en todo el universo ✨</div>
+<div class="quote">"Entre millones de personas, mi corazón te eligió a ti."</div>
+<button class="btn" onclick="showLetter()">Presiona aquí mi amor 💙</button>
+</section>
+
+<div id="letter" class="letter">
+<h2>💌 Carta para Valery 💌</h2><br>
+
+<p>
+Querida Valery:
+<br><br>
+Si estás leyendo esto, quiero que sepas que esta página fue creada especialmente para ti.
+No es solo código o una página web, es una forma de expresar todo el cariño que te tengo.
+<br><br>
+Cuando pienso en ti, pienso en alguien que hace los días más bonitos. Pienso en una sonrisa capaz
+de alegrar cualquier momento y en una persona que merece todo lo bueno que existe.
+<br><br>
+Tal vez no siempre encuentre las palabras perfectas, pero quiero que nunca dudes de lo especial que eres.
+Tu forma de ser, tu manera de hablar, tus ocurrencias y hasta los pequeños detalles que quizás tú no notas,
+son cosas que te hacen única.
+<br><br>
+Hay personas que pasan por nuestra vida y otras que dejan huellas. Tú eres de esas personas que dejan huellas.
+Cada conversación, cada recuerdo y cada momento compartido tiene un lugar importante en mi corazón.
+<br><br>
+Deseo que siempre seas feliz, que cumplas cada sueño que tengas y que nunca te falten razones para sonreír.
+Porque tu sonrisa vale más de lo que imaginas.
+<br><br>
+💙 Te quiero muchísimo, Valery. 💙
+<br><br>
+Y ahora quiero decirte algo importante...
+<br><br>
+Perdón por tardar tanto en hacer esto. Quería que fuera algo especial, algo que te sacara una sonrisa.
+Quizás me tomó más tiempo del que debía, pero cada detalle fue pensado con cariño.
+<br><br>
+Perdón por la demora, y gracias por ser una persona tan maravillosa.
+<br><br>
+<div class="final">
+💙 Porque alguien tan especial como tú merece algo hecho con amor. 💙
+</div>
+</p>
+</div>
+
+<footer>
+🌙 Hecho para Valery bajo un cielo lleno de estrellas azules 💙
+</footer>
+
+<script>
+for(let i=0;i<120;i++){
+let s=document.createElement('div');
+s.className='star';
+s.innerHTML='✦';
+s.style.left=Math.random()*100+'vw';
+s.style.top=Math.random()*100+'vh';
+s.style.opacity=Math.random();
+s.style.color='#bae6fd';
+document.getElementById('stars').appendChild(s);
+}
+
+for(let i=0;i<80;i++){
+let h=document.createElement('div');
+h.className='heart';
+h.innerHTML='💙';
+h.style.left=Math.random()*100+'vw';
+h.style.fontSize=(15+Math.random()*30)+'px';
+h.style.animationDuration=(8+Math.random()*10)+'s';
+document.getElementById('hearts').appendChild(h);
+}
+
+function showLetter(){
+document.getElementById('letter').style.display='block';
+window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'});
+}
+</script>
+
+</body>
+</html>
